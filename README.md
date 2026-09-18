@@ -53,7 +53,7 @@ Relationships preserve source references, excerpts, extraction methods, confiden
 
 ## Project ownership and AI assistance
 
-This is Maxwell D'Andrea's project. Development was AI-assisted, including code generation, iteration, and preparation of this public release. It should not be read as a claim that every line was written manually. The included source makes the architecture and behavior available for inspection rather than relying on a résumé description.
+Created by Maxwell D'Andrea with AI-assisted development, including code generation, iteration, testing, and preparation of this public release. The source and offline harness make the architecture and behavior available for direct inspection.
 
 See [code provenance](docs/CODE_PROVENANCE.md), [design decisions and limitations](docs/ARCHITECTURE.md), and [publication boundaries](docs/SANITIZATION.md).
 
