@@ -1,6 +1,6 @@
 # Code provenance
 
-The source files under `graph/`, `shared/`, and `agent/` were extracted from Maxwell D'Andrea's private Follow the Money backend at commit `64eb57940279320aef44a9649981ed272b2aaa5c` on September 17, 2026. Their implementation is unchanged in this release.
+The source files under `graph/`, `shared/`, and `agent/` were extracted from Maxwell D'Andrea's private Follow the Money backend at commit `64eb57940279320aef44a9649981ed272b2aaa5c` on September 17, 2026. Their implementation is unchanged in this release; three lines of trailing whitespace were removed from `graph/store.ts`.
 
 `tests/graph-core.test.ts` retains the first three original tests, with unused imports removed. The test requiring private Apple/Microsoft graph exports was excluded. The retained tests cover identifier convergence and name-only separation, rejected candidates and evidence persistence, and bounded traversal with fixture exclusion from production exports.
 

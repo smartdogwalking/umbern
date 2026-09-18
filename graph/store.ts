@@ -182,7 +182,7 @@ export class EvidenceStore {
     const id = stableId('source', `${source.provider}:${source.externalId}:${source.sha256}`);
     this.db.prepare(`INSERT OR IGNORE INTO source_documents
       (id, provider, document_type, external_id, title, accession_number, filed_at, published_at, retrieved_at, source_url, raw_storage_path, sha256, parser_version, metadata, evidence_class)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`) 
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`)
       .run(id, source.provider, source.documentType, source.externalId, source.title ?? null, source.accessionNumber ?? null, source.filedAt ?? null,
         source.publishedAt ?? null, source.retrievedAt ?? new Date().toISOString(), source.sourceUrl, source.rawStoragePath, source.sha256,
         source.parserVersion, JSON.stringify(source.metadata ?? {}), source.evidenceClass ?? (source.provider === 'SEC' ? 'OFFICIAL_RECORD' : 'FIRST_PARTY'));
@@ -295,7 +295,7 @@ export class EvidenceStore {
     this.db.prepare(`INSERT OR IGNORE INTO relationships
       (id, subject_entity_id, predicate, object_entity_id, valid_from, valid_to, observed_at, amount, currency, percentage, shares,
        assertion_type, confidence, resolution_confidence, source_document_id, source_provider, source_record_id, source_url, extraction_method, evidence_class, evidence, attributes)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`) 
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`)
       .run(id, candidate.subjectEntityId, candidate.predicate, candidate.objectEntityId, candidate.validFrom ?? null, candidate.validTo ?? null,
         candidate.observedAt ?? new Date().toISOString(), candidate.amount ?? null, candidate.currency ?? null, candidate.percentage ?? null,
         candidate.shares ?? null, candidate.assertionType, candidate.confidence, candidate.resolutionConfidence, candidate.sourceDocumentId,
@@ -315,7 +315,7 @@ export class EvidenceStore {
     this.db.prepare(`INSERT OR IGNORE INTO events
       (id, event_type, event_date, amount, currency, shares, price_per_share, description, attributes, source_document_id,
        source_record_id, extraction_method, assertion_type, evidence_class, confidence, evidence, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-       ON CONFLICT(id) DO UPDATE SET extraction_method = excluded.extraction_method, updated_at = excluded.updated_at`) 
+       ON CONFLICT(id) DO UPDATE SET extraction_method = excluded.extraction_method, updated_at = excluded.updated_at`)
       .run(id, candidate.eventType, candidate.eventDate, candidate.amount ?? null, candidate.currency ?? null, candidate.shares ?? null,
         candidate.pricePerShare ?? null, candidate.description, JSON.stringify(candidate.attributes ?? {}), candidate.sourceDocumentId,
         candidate.sourceRecordId, candidate.extractionMethod, candidate.assertionType ?? 'ASSERTED',
