@@ -2,11 +2,13 @@
 
 [![Offline tests](https://github.com/smartdogwalking/umbern/actions/workflows/test.yml/badge.svg)](https://github.com/smartdogwalking/umbern/actions/workflows/test.yml)
 
-An evidence-backed research platform for exploring documented relationships between companies, people, funds, and public institutions. Developed under the working name **Follow the Money**.
+An evidence-backed research graph for exploring documented relationships between companies, people, funds, and public institutions. Developed under the working name **Follow the Money**.
 
 The engineering problem: public records use inconsistent identities and relationship semantics. A useful research tool needs to reconcile those records without losing the source, flattening subsidiaries into their parents, or treating a connection as proof of causation.
 
 This repository is a **sanitized, runnable code showcase**, not the full application or a production service. It includes the original graph engine, a deterministic SEC Exhibit 21 parser, and offline tests with synthetic data. No API keys, accounts, external services, or dependency installation are required.
+
+**Start here:** [Engineering review guide](docs/REVIEW_GUIDE.md) · [Design decisions](docs/ARCHITECTURE.md) · [Code provenance](docs/CODE_PROVENANCE.md)
 
 ## Try it
 
