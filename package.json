@@ -1,0 +1,12 @@
+{
+  "name": "umbern-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A runnable, sanitized slice of an evidence-backed research graph.",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "test": "node --test tests/*.test.ts",
+    "demo": "node examples/demo.ts"
+  }
+}
