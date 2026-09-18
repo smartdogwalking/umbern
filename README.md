@@ -4,6 +4,8 @@
 
 An evidence-backed research graph for exploring documented relationships between companies, people, funds, and public institutions. Developed under the working name **Follow the Money**.
 
+**Status: completed experimental build; no longer in active development.** The project was a useful test of entity resolution and source traceability. Further product development was discontinued after an existing solution was found to address the intended need. This repository preserves a runnable engineering showcase of that work.
+
 The engineering problem: public records use inconsistent identities and relationship semantics. A useful research tool needs to reconcile those records without losing the source, flattening subsidiaries into their parents, or treating a connection as proof of causation.
 
 This repository is a **sanitized, runnable code showcase**, not the full application or a production service. It includes the original graph engine, a deterministic SEC Exhibit 21 parser, and offline tests with synthetic data. No API keys, accounts, external services, or dependency installation are required.

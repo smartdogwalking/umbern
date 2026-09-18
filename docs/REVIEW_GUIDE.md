@@ -2,6 +2,8 @@
 
 Umbern explores a research problem: how to connect public-record relationships while preserving what each source actually supports. This release makes a small, runnable part of the implementation available for inspection. It is not a hosted application or a validated legal-research service.
 
+This is a completed experimental build, not an active product. Further development was discontinued after an existing solution was found to address the intended need; the implementation remains available as a record of the engineering work.
+
 ## A short walkthrough
 
 1. Run `npm test` and `npm run demo` from the repository root using Node.js 24 or newer. No dependencies or credentials are needed. The demo prints a synthetic four-hop relationship path and its supporting source evidence.
