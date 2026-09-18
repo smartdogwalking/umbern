@@ -10,6 +10,12 @@ The engineering problem: public records use inconsistent identities and relation
 
 This repository is a **sanitized, runnable code showcase**, not the full application or a production service. It includes the original graph engine, a deterministic SEC Exhibit 21 parser, and offline tests with synthetic data. No API keys, accounts, external services, or dependency installation are required.
 
+## Relationship to the FTM backend
+
+The Follow the Money (FTM) backend was the core of Umbern, not a separate unrelated project. Its canonical graph engine is already embedded here: entity resolution, validation, SQLite evidence storage, and traversal, plus shared identity helpers and the Exhibit 21 parser. See [code provenance](docs/CODE_PROVENANCE.md) for the exact extraction point.
+
+This is a selected backend release, not the entire backend. Live source workers, acquisition orchestration, private research data, credentials, infrastructure, and the frontend remain private. The diagram below describes the larger design; only the published files can be reviewed or run from this repository.
+
 **Start here:** [Engineering review guide](docs/REVIEW_GUIDE.md) · [Design decisions](docs/ARCHITECTURE.md) · [Code provenance](docs/CODE_PROVENANCE.md)
 
 ## Try it
